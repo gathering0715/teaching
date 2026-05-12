@@ -10,15 +10,19 @@
   <div class="app-shell">
     <div class="hover-reveal" aria-hidden="true"></div>
     <nav class="part-nav" aria-label="파트 바로가기">
-      <a class="part-link" href="#slide-2" data-go-slide="1">
+      <a class="part-link" href="#slide-1" data-go-slide="0">
+        <span class="part-link-num">첫 화면</span>
+        <span class="part-link-label"></span>
+      </a>
+      <a class="part-link" href="#slide-3" data-go-slide="2">
         <span class="part-link-num">1부</span>
         <span class="part-link-label">기초 / 소통</span>
       </a>
-      <a class="part-link" href="#slide-12" data-go-slide="11">
+      <a class="part-link" href="#slide-13" data-go-slide="12">
         <span class="part-link-num">2부</span>
         <span class="part-link-label">채용</span>
       </a>
-      <a class="part-link" href="#slide-19" data-go-slide="18">
+      <a class="part-link" href="#slide-20" data-go-slide="19">
         <span class="part-link-num">3부</span>
         <span class="part-link-label">외주</span>
       </a>
@@ -56,15 +60,15 @@
               <span>개발을 몰라도 괜찮습니다. 무엇을 물어보고 어디까지 확인하면 되는지 감을 잡고 가면 됩니다.</span>
             </div>
             <div class="agenda-panel compact">
-              <article class="agenda-jump" data-go-slide="1" role="button" tabindex="0" aria-label="1부 기초 소통으로 이동">
+              <article class="agenda-jump" data-go-slide="2" role="button" tabindex="0" aria-label="1부 기초 소통으로 이동">
                 <strong>1부. 기초 / 소통</strong>
                 <span>서비스가 움직이는 순서</span>
               </article>
-              <article class="agenda-jump" data-go-slide="11" role="button" tabindex="0" aria-label="2부 채용으로 이동">
+              <article class="agenda-jump" data-go-slide="12" role="button" tabindex="0" aria-label="2부 채용으로 이동">
                 <strong>2부. 채용</strong>
                 <span>면접에서 물어볼 질문</span>
               </article>
-              <article class="agenda-jump" data-go-slide="18" role="button" tabindex="0" aria-label="3부 외주로 이동">
+              <article class="agenda-jump" data-go-slide="19" role="button" tabindex="0" aria-label="3부 외주로 이동">
                 <strong>3부. 외주</strong>
                 <span>대표가 확인할 기준</span>
               </article>
@@ -77,14 +81,31 @@
         </div>
       </section>
 
-      <section class="slide part-slide" data-part="1부" data-title="서비스 흐름" data-purpose="대표가 개발자와 같은 지도를 보고 대화하게 만드는 첫 장">
+      <section class="slide speaker-intro" data-title="강사 소개" data-purpose="1부 시작 전에 강사 이력과 신뢰 배경을 짧게 소개한다">
+        <div class="speaker-intro-photo" aria-hidden="true">
+          <img src="./assets/speaker-kim-photoroom.png" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'">
+          <div class="speaker-portrait-placeholder">
+            <span>김대일</span>
+          </div>
+        </div>
+        <div class="speaker-intro-copy">
+          <h2>㈜게더링 대표이사 김대일</h2>
+          <ul>
+            <li>비전공자 출신 개발자 · 창업자</li>
+            <li>외주 개발 20건 이상 수행</li>
+            <li>전국 대학 동아리 앱 '마이캠퍼스' 운영</li>
+            <li>광주전남스타트업협회 고문이사</li>
+            <li>스마트인재개발원 및 광주인공지능사관학교 심사위원</li>
+          </ul>
+        </div>
+        <div class="speaker-intro-brand" aria-label="게더링">
+          <img src="./assets/gathering-logo-vertical.png" alt="(주)게더링">
+        </div>
+      </section>
+
+      <section class="slide part-slide deck-part deck-part-1" data-part="1부" data-title="서비스 흐름" data-purpose="대표가 개발자와 같은 지도를 보고 대화하게 만드는 첫 장">
         <div class="part-chip">1부 · 기초 / 소통</div>
         <h2>서비스 흐름은 화면·처리·저장·운영이 이어지는 구조다</h2>
-        <div class="section-context">
-          <article><strong>대표가 봐야 할 것</strong><span>화면에서 누른 행동이 실제로는 규칙, 저장, 서버 운영까지 이어지는지 확인한다.</span></article>
-          <article><strong>개발자에게 물을 것</strong><span>이 기능은 프런트만 바꾸나요, API·DB·배포까지 건드리나요?</span></article>
-          <article><strong>대표가 확인할 것</strong><span>고객 행동, 성공/실패 화면, 저장 기록, 장애 책임자를 한 줄로 연결한다.</span></article>
-        </div>
         <div class="diagram-layout explainer-slide main-map" data-focus="frontend">
           <div class="system-card">
             <svg class="system-figure" viewBox="0 0 960 520" aria-label="프런트, 백엔드, API, DB, 서버, Git, 배포 흐름도">
@@ -162,19 +183,19 @@
         </div>
       </section>
 
-      <section class="slide has-mini-map" data-show-map="true" data-part="1부" data-map-focus="frontend" data-title="프런트엔드 선택" data-purpose="대표는 기술 유행보다 유지할 사람과 수정 비용을 먼저 본다">
+      <section class="slide has-mini-map deck-part deck-part-1" data-show-map="true" data-part="1부" data-map-focus="frontend" data-title="프런트엔드 선택" data-purpose="대표는 기술 유행보다 유지할 사람과 수정 비용을 먼저 본다">
         <div class="slide-head">
           <p class="eyebrow">프런트엔드</p>
           <h2>프런트엔드는 고객이 보고 누르는 화면이다</h2>
         </div>
-        <div class="part-one-role-panel">
+        <div class="part-one-role-panel deck-strip">
           <strong>프런트가 하는 일</strong>
           <span>화면 표시</span>
           <span>입력 받기</span>
-          <span>정보 전달</span>
+          <span>API</span>
           <span>결과 보여주기</span>
         </div>
-        <div class="choice-grid four part-one-tech-section">
+        <div class="choice-grid four part-one-tech-section deck-grid deck-grid-5">
           <article class="choice-card"><strong>HTML / CSS</strong><span>장점: 단순함</span><small>단점: 화면 상태가 많아지면 관리가 어렵다</small></article>
           <article class="choice-card recommended"><strong>React</strong><span>장점: 채용 쉬움</span><small>단점: 초기에 규칙을 안 잡으면 복잡해진다</small></article>
           <article class="choice-card trend"><strong>Vue</strong><span>장점: 적응 빠름</span><small>단점: 팀 규칙이 없으면 화면마다 달라진다</small></article>
@@ -187,7 +208,7 @@
           <span><b>2. 개발언어</b>HTML · CSS · JavaScript · React · Vue · Angular · Svelte</span>
           <span><b>3. 개발 전 생각할 것</b>서비스에 어떤 화면이 필요한가 / 각 화면에 어떤 버튼과 기능이 들어가는가</span>
         </div>
-        <div class="metrics triple part-one-considerations">
+        <div class="metrics triple part-one-considerations deck-grid deck-grid-3">
           <article class="decision-card"><strong>서비스 구상</strong><span>고객이 왜 들어오고 무엇을 끝내야 하는지 적는다</span></article>
           <article class="decision-card"><strong>페이지 구성</strong><span>각 페이지에 들어갈 문구, 버튼, 입력칸, 기능을 떠올린다</span></article>
           <article class="decision-card"><strong>변경 대비</strong><span>나중에 자주 바뀔 화면과 기능을 미리 구분한다</span></article>
@@ -195,19 +216,19 @@
         <div class="quote-band compact-note">대표는 "무엇이 최신인가"보다 "우리 회사가 1년 뒤에도 고칠 수 있는가"를 본다.</div>
       </section>
 
-      <section class="slide has-mini-map" data-show-map="true" data-part="1부" data-map-focus="api" data-title="API" data-purpose="API는 대표가 직접 만들 필요는 없지만 문서가 있는지는 반드시 확인한다">
+      <section class="slide has-mini-map deck-part deck-part-1" data-show-map="true" data-part="1부" data-map-focus="api" data-title="API" data-purpose="API는 대표가 직접 만들 필요는 없지만 문서가 있는지는 반드시 확인한다">
         <div class="slide-head">
           <p class="eyebrow">API</p>
           <h2>API는 화면과 처리부가 주고받는 약속이다</h2>
         </div>
-        <div class="part-one-role-panel">
+        <div class="part-one-role-panel deck-strip">
           <strong>API가 하는 일</strong>
           <span>화면 정보 받기</span>
           <span>필요한 정보 전달</span>
           <span>처리 결과 돌려주기</span>
           <span>오류 구분</span>
         </div>
-        <div class="part-one-tech-strip">
+        <div class="part-one-tech-strip deck-strip deck-grid deck-grid-4">
           <span>REST</span>
           <span>Fetch</span>
           <span>GraphQL</span>
@@ -226,7 +247,7 @@
           <span>고객에게 보일 문구</span>
           <span>문제 추적 기록</span>
         </div>
-        <div class="metrics triple part-one-considerations">
+        <div class="metrics triple part-one-considerations deck-grid deck-grid-3">
           <article class="decision-card"><strong>꼭 물을 것</strong><span>화면에서 보낼 정보와 보여줄 결과를 정했나</span></article>
           <article class="decision-card"><strong>예시</strong><span>예약 신청: 성공·실패·권한 오류</span></article>
           <article class="decision-card"><strong>체크 기준</strong><span>보내는 정보, 성공·실패 화면, 고객 표시 문구가 함께 정해졌는가</span></article>
@@ -234,12 +255,12 @@
         <div class="api-sample"><strong>예약 신청 API 예시</strong><span>화면에서 보내는 정보: 날짜·시간·고객ID</span><span>성공: 예약번호</span><span>실패: 마감·권한 없음·중복 신청</span></div>
       </section>
 
-      <section class="slide has-mini-map" data-show-map="true" data-part="1부" data-map-focus="backend" data-title="백엔드 선택" data-purpose="대표는 언어 이름보다 우리 사업의 속도·안정성·채용 난이도를 본다">
+      <section class="slide has-mini-map deck-part deck-part-1" data-show-map="true" data-part="1부" data-map-focus="backend" data-title="백엔드 선택" data-purpose="대표는 언어 이름보다 우리 사업의 속도·안정성·채용 난이도를 본다">
         <div class="slide-head">
           <p class="eyebrow">백엔드</p>
           <h2>백엔드는 화면 뒤에서 규칙을 처리하는 영역이다</h2>
         </div>
-        <div class="backend-role-panel">
+        <div class="backend-role-panel deck-strip">
           <strong>백엔드가 하는 일</strong>
           <span>권한 확인</span>
           <span>규칙 처리</span>
@@ -251,15 +272,15 @@
           <article><strong>2. 개발언어</strong><span>Python · Node · Java · PHP · Spring</span></article>
           <article><strong>3. 개발 전 생각할 것</strong><span>회원, 예약, 결제, 정산 같은 사업 규칙을 어디까지 자동 처리할 것인가</span></article>
         </div>
-        <div class="framework-grid practical part-one-tech-section">
+        <div class="framework-grid practical part-one-tech-section deck-grid deck-grid-5">
           <article class="framework-card trend"><strong>Python / FastAPI</strong><p><span>장점: 요즘 트렌드</span>단점: 큰 서비스는 구조를 잡아야 한다</p></article>
-          <article class="framework-card stable"><strong>Python / Django</strong><p><span>장점: 완성형 웹</span>단점: 자유도가 낮게 느껴질 수 있다</p></article>
+          <article class="framework-card"><strong>Python / Django</strong><p><span>장점: 완성형 웹</span>단점: 자유도가 낮게 느껴질 수 있다</p></article>
           <article class="framework-card"><strong>Node / Express</strong><p><span>장점: 가벼움</span>단점: 팀 규칙이 없으면 코드가 흩어진다</p></article>
           <article class="framework-card recommended"><strong>Node / NestJS</strong><p><span>장점: 팀 개발 구조</span>단점: 초기 학습량이 있다</p></article>
-          <article class="framework-card stable"><strong>Java / Spring Boot</strong><p><span>장점: 기업용 표준</span>단점: MVP에는 무겁게 느껴질 수 있다</p></article>
+          <article class="framework-card"><strong>Java / Spring Boot</strong><p><span>장점: 기업용 표준</span>단점: MVP에는 무겁게 느껴질 수 있다</p></article>
           <article class="framework-card stable"><strong>PHP / Laravel</strong><p><span>장점: 웹 제작 빠름</span>단점: 요즘 채용이 거의 불가능할 수 있다</p></article>
         </div>
-        <div class="metrics triple part-one-considerations">
+        <div class="metrics triple part-one-considerations deck-grid deck-grid-3">
           <article class="decision-card"><strong>서비스 규칙</strong><span>누가 무엇을 할 수 있고 어떤 조건에서 막을지 정한다</span></article>
           <article class="decision-card"><strong>자동 처리</strong><span>예약 확정, 결제 확인, 알림 발송 같은 흐름을 떠올린다</span></article>
           <article class="decision-card"><strong>운영 기록</strong><span>문제가 생겼을 때 확인해야 할 기록을 미리 생각한다</span></article>
@@ -267,19 +288,19 @@
         <div class="quote-band compact-note">기술 선택 3문장: 우리 기능의 규칙을 처리할 수 있는가 / 데이터 저장을 안전하게 하는가 / 장애 때 원인을 추적할 수 있는가.</div>
       </section>
 
-      <section class="slide has-mini-map" data-show-map="true" data-part="1부" data-map-focus="db" data-title="DB" data-purpose="DB는 개발 용어가 아니라 고객·주문·결제 기록이 남는 회사 장부다">
+      <section class="slide has-mini-map deck-part deck-part-1" data-show-map="true" data-part="1부" data-map-focus="db" data-title="DB" data-purpose="DB는 개발 용어가 아니라 고객·주문·결제 기록이 남는 회사 장부다">
         <div class="slide-head">
           <p class="eyebrow">DB</p>
           <h2>DB는 서비스 정보를 저장하는 회사 장부다</h2>
         </div>
-        <div class="part-one-role-panel">
+        <div class="part-one-role-panel deck-strip">
           <strong>DB가 하는 일</strong>
           <span>데이터 저장</span>
           <span>조회</span>
           <span>권한 제한</span>
           <span>복구 기준</span>
         </div>
-        <div class="part-one-tech-strip">
+        <div class="part-one-tech-strip deck-strip deck-grid deck-grid-4">
           <span>PostgreSQL</span>
           <span>MySQL</span>
           <span>MongoDB</span>
@@ -290,12 +311,12 @@
           <article><strong>2. 저장소 종류</strong><span>PostgreSQL · MySQL · MongoDB · Redis</span></article>
           <article><strong>3. 개발 전 생각할 것</strong><span>고객, 주문, 결제, 상담, 로그 중 어떤 정보를 DB에 저장할 것인가</span></article>
         </div>
-        <div class="card-row">
+        <div class="card-row deck-grid deck-grid-3">
           <article class="info-card"><h3>저장</h3><p>고객, 주문, 결제, 로그가 무엇으로 남는지 정한다.</p></article>
           <article class="info-card"><h3>복구</h3><p>백업 주기, 보관 위치, 복구 시간, 책임자를 정한다.</p></article>
           <article class="info-card"><h3>권한</h3><p>누가 조회·수정·삭제하고 원문을 볼 수 있는지 나눈다.</p></article>
         </div>
-        <div class="quote-grid part-one-considerations">
+        <div class="quote-grid part-one-considerations deck-grid deck-grid-3">
           <article class="doc-line"><b>체크 기준</b><span>관리자는 주문을 보되 결제 정보 원문까지 볼 필요가 있는가?</span></article>
           <article class="doc-line"><b>체크 기준</b><span>백업 주기와 장애 시 복구 목표 시간이 정해져 있는가?</span></article>
           <article class="doc-line"><b>대표 질문</b><span>고객 탈퇴, 결제 취소, 정산 완료 후 각각 어떤 기록을 남기나요?</span></article>
@@ -303,19 +324,19 @@
         <div class="quote-band compact-note">고객 탈퇴 시 삭제할 정보와 결제·정산 기록처럼 보관할 정보를 구분한다.</div>
       </section>
 
-      <section class="slide has-mini-map" data-show-map="true" data-part="1부" data-map-focus="server" data-title="서버" data-purpose="서버 방식은 기술 취향이 아니라 비용과 장애 책임 구조의 선택이다">
+      <section class="slide has-mini-map deck-part deck-part-1" data-show-map="true" data-part="1부" data-map-focus="server" data-title="서버" data-purpose="서버 방식은 기술 취향이 아니라 비용과 장애 책임 구조의 선택이다">
         <div class="slide-head">
           <p class="eyebrow">서버</p>
           <h2>서버는 서비스가 실제로 돌아가는 운영 공간이다</h2>
         </div>
-        <div class="part-one-role-panel">
+        <div class="part-one-role-panel deck-strip">
           <strong>서버가 하는 일</strong>
           <span>서비스 실행</span>
           <span>접속 처리</span>
           <span>백업</span>
           <span>장애 알림</span>
         </div>
-        <div class="part-one-tech-strip">
+        <div class="part-one-tech-strip deck-strip deck-grid deck-grid-4">
           <span>AWS</span>
           <span>Azure</span>
           <span>Naver Cloud</span>
@@ -330,28 +351,30 @@
           <article class="choice-card key-card"><strong>클라우드</strong><span>초기 서비스 기본값</span><small>초기 비용이 낮고 확장·백업·장애 알림 도구를 쓰기 쉽다. 대신 권한 설정과 월 비용 관리를 확인해야 한다.</small></article>
           <article class="choice-card"><strong>자체 서버실</strong><span>전담 인력 있을 때</span><small>물리 통제는 가능하지만 장비·공간·전기·보안·장애 출동을 내부에서 감당해야 한다.</small></article>
         </div>
-        <div class="metrics triple compact-metrics part-one-considerations">
+        <div class="metrics triple compact-metrics part-one-considerations deck-grid deck-grid-3">
           <article class="decision-card"><strong>비용</strong><span>월 비용 상한을 정한다</span></article>
           <article class="decision-card"><strong>장애</strong><span>알림과 복구 책임자를 정한다</span></article>
           <article class="decision-card"><strong>계약 확인</strong><span>장애 알림·백업·접근 권한을 적는다</span></article>
         </div>
-        <div class="doc-line single"><b>체크 기준</b><span>운영 서버 계정, 백업, 장애 알림, 접근 권한을 회사가 확인할 수 있는가?</span></div>
+        <div class="quote-grid server-check-grid deck-grid deck-grid-3">
+          <article class="doc-line server-check-card"><b>체크 기준</b><span>운영 서버 계정, 백업, 장애 알림, 접근 권한을 회사가 확인할 수 있는가?</span></article>
+        </div>
         <div class="quote-band compact-note">계약 전 확인: 서버 계정 소유자, 월 비용 상한, 백업 위치, 장애 알림 수신자.</div>
       </section>
 
-      <section class="slide has-mini-map" data-show-map="true" data-part="1부" data-map-focus="git" data-title="Git" data-purpose="대표는 코드를 몰라도 원본 저장소와 변경 이력의 소유권은 확인해야 한다">
+      <section class="slide has-mini-map deck-part deck-part-1" data-show-map="true" data-part="1부" data-map-focus="git" data-title="Git" data-purpose="대표는 코드를 몰라도 원본 저장소와 변경 이력의 소유권은 확인해야 한다">
         <div class="slide-head">
           <p class="eyebrow">Git</p>
           <h2>Git은 코드 원본과 변경 이력을 보관하는 도구다</h2>
         </div>
-        <div class="part-one-role-panel">
+        <div class="part-one-role-panel deck-strip">
           <strong>Git이 하는 일</strong>
           <span>변경 이력</span>
           <span>원본 보관</span>
           <span>되돌리기</span>
           <span>협업 기준</span>
         </div>
-        <div class="part-one-tech-strip">
+        <div class="part-one-tech-strip deck-strip deck-grid deck-grid-4">
           <span>GitHub</span>
           <span>GitLab</span>
           <span>Branch</span>
@@ -362,55 +385,55 @@
           <article><strong>Commit</strong><span>변경 이유와 수정 범위를 짧게 남긴다</span></article>
           <article><strong>Review</strong><span>운영 반영 전 최소 확인 절차를 둔다</span></article>
         </div>
-        <div class="metrics triple compact-metrics part-one-considerations">
+        <div class="metrics triple compact-metrics part-one-considerations deck-grid deck-grid-3">
           <article class="decision-card"><strong>저장소 소유권</strong><span>회사 계정이 원본 저장소를 소유하는가</span></article>
           <article class="decision-card"><strong>변경 이력</strong><span>누가 언제 무엇을 고쳤는지 남는가</span></article>
           <article class="decision-card"><strong>인수인계</strong><span>다음 개발자가 코드를 받을 수 있는가</span></article>
         </div>
-        <div class="quote-grid">
+        <div class="quote-grid deck-grid deck-grid-2">
           <article class="doc-line"><b>체크 기준</b><span>운영 반영 기준 브랜치와 변경 이유가 남아 있는가?</span></article>
           <article class="doc-line"><b>대표 질문</b><span>외주 종료 후 회사 계정에서 저장소, 권한, 배포 이력을 모두 확인할 수 있나요?</span></article>
         </div>
       </section>
 
-      <section class="slide has-mini-map" data-show-map="true" data-part="1부" data-map-focus="deploy" data-title="배포" data-purpose="대표는 운영 공개 전후의 승인, 확인, 되돌리기 절차를 확인해야 한다">
+      <section class="slide has-mini-map deck-part deck-part-1" data-show-map="true" data-part="1부" data-map-focus="deploy" data-title="배포" data-purpose="대표는 운영 공개 전후의 승인, 확인, 되돌리기 절차를 확인해야 한다">
         <div class="slide-head">
           <p class="eyebrow">배포</p>
           <h2>배포는 만든 기능을 고객에게 공개하는 절차다</h2>
         </div>
-        <div class="part-one-role-panel">
+        <div class="part-one-role-panel deck-strip">
           <strong>배포가 하는 일</strong>
           <span>테스트 반영</span>
           <span>운영 공개</span>
           <span>오픈 확인</span>
           <span>되돌리기</span>
         </div>
-        <div class="part-one-tech-strip">
+        <div class="part-one-tech-strip deck-strip deck-grid deck-grid-4">
           <span>테스트 서버</span>
           <span>베타 테스트</span>
           <span>운영 서버</span>
           <span>점검</span>
         </div>
-        <div class="metrics triple compact-metrics part-one-considerations">
+        <div class="metrics triple compact-metrics part-one-considerations deck-grid deck-grid-3">
           <article class="decision-card"><strong>검수 환경</strong><span>운영 전 테스트 서버에서 대표가 확인하는가</span></article>
           <article class="decision-card"><strong>베타 운영</strong><span>일부 고객이나 내부 사용자로 먼저 확인하는가</span></article>
           <article class="decision-card"><strong>오픈 후 점검</strong><span>운영 반영 뒤 핵심 기능과 오류를 바로 확인하는가</span></article>
         </div>
       </section>
 
-      <section class="slide has-mini-map" data-show-map="true" data-part="1부" data-map-focus="flow" data-title="버튼 하나의 흐름" data-purpose="고객 행동 하나가 화면, 규칙 처리, 저장, 결과 화면까지 이어짐을 보여준다">
+      <section class="slide has-mini-map deck-part deck-part-1" data-show-map="true" data-part="1부" data-map-focus="flow" data-title="버튼 하나의 흐름" data-purpose="고객 행동 하나가 화면, 규칙 처리, 저장, 결과 화면까지 이어짐을 보여준다">
         <div class="slide-head">
           <p class="eyebrow">동작 흐름</p>
           <h2>버튼 하나는 화면·처리·저장을 함께 움직인다</h2>
         </div>
-        <div class="part-one-role-panel">
+        <div class="part-one-role-panel deck-strip">
           <strong>버튼 하나에서 확인할 일</strong>
           <span>고객 행동</span>
           <span>화면 상태</span>
           <span>서버 판단</span>
           <span>기록과 응답</span>
         </div>
-        <div class="part-one-tech-strip">
+        <div class="part-one-tech-strip deck-strip deck-grid deck-grid-4">
           <span>누가 눌렀나</span>
           <span>무슨 값을 보냈나</span>
           <span>성공 기준은 뭔가</span>
@@ -422,62 +445,60 @@
         </div>
         <div class="flow-strip">
           <span>프런트 클릭</span>
-          <span>정보 전달</span>
+          <span>API</span>
           <span>백엔드 검사</span>
           <span>DB 저장</span>
           <span>결과 돌려주기</span>
           <span>화면 반영</span>
         </div>
-        <div class="step-grid part-one-considerations">
+        <div class="step-grid part-one-considerations deck-grid deck-grid-4 ordered-grid">
           <article class="step-item"><strong>권한</strong><span>로그인·역할·상태를 먼저 확인하는가</span></article>
           <article class="step-item"><strong>중복</strong><span>두 번 눌러도 한 번만 저장되는가</span></article>
           <article class="step-item"><strong>실패</strong><span>실패 문구와 재시도 방법이 보이는가</span></article>
           <article class="step-item"><strong>기록</strong><span>관리자 화면과 로그에서 추적 가능한가</span></article>
         </div>
-        <div class="quote-grid">
+        <div class="quote-grid deck-grid deck-grid-2">
           <article class="doc-line"><b>대표 질문</b><span>이 버튼의 범위는 화면 변경만인가요, DB 저장까지인가요?</span></article>
           <article class="doc-line"><b>문서 문장</b><span>예약 신청 버튼은 권한 확인, 중복 방지, DB 저장, 성공·실패 화면 반영까지 포함한다.</span></article>
         </div>
         <div class="quote-band compact-note">버튼 하나라도 DB 저장, 권한, 알림, 관리자 화면까지 붙으면 별도 기능 범위로 본다.</div>
       </section>
 
-      <section class="slide qa-slide" data-title="1부 정리" data-purpose="청중이 자기 서비스 흐름을 직접 말로 바꿔보는 체크 장">
+      <section class="slide qa-slide deck-part deck-part-1" data-title="1부 정리" data-purpose="청중이 자기 서비스 흐름을 직접 말로 바꿔보는 체크 장">
         <p class="eyebrow">1부 체크</p>
-        <h2>앞 내용을 잊어도 이것만 알아가세요</h2>
+        <h2>1부는 개발의 흐름을 보는 시간이다</h2>
         <div class="part-one-takeaway">
           <div class="takeaway-hero">
-            <strong>예시 서비스 핵심 프로세스 한 줄</strong>
-            <p>고객이 예약 버튼을 누르면, 화면은 처리 중을 보여주고 필요한 정보가 전달되며, 백엔드는 권한과 중복을 검사하고 DB에 기록한 뒤 성공·실패 화면으로 돌려준다.</p>
+            <strong>개발은 화면 하나가 아니라 서비스가 움직이는 전체 흐름이다</strong>
+            <p><span>고객 행동이 화면에서 시작해 API와 백엔드를 지나 DB에 기록된다.</span><span>그리고 Git, 서버, 배포가 있어야 실제 서비스로 운영된다.</span></p>
           </div>
           <div class="takeaway-flow">
-            <span>고객 행동</span>
-            <span>화면 상태</span>
-            <span>정보 전달</span>
-            <span>백엔드 규칙</span>
-            <span>DB 기록</span>
-            <span>운영 확인</span>
+            <span>화면</span>
+            <span>API</span>
+            <span>백엔드</span>
+            <span>DB</span>
+            <span>Git</span>
+            <span>배포</span>
           </div>
           <div class="core-summary-grid">
-            <article><b>CRUD</b><span>만들기·보기·수정·삭제가 기능 범위다</span></article>
-            <article><b>API</b><span>화면과 백엔드가 주고받는 약속이다</span></article>
-            <article><b>DB</b><span>고객·주문·결제·로그가 남는 장부다</span></article>
-            <article><b>Git</b><span>코드 원본과 변경 이력의 소유권이다</span></article>
-            <article><b>배포</b><span>고객에게 공개하고 되돌릴 수 있는 절차다</span></article>
-            <article><b>운영</b><span>장애 알림·복구 담당·계정 권한을 정한다</span></article>
+            <article><b>1</b><span>프런트는 고객이 보고 누르는 화면이다.</span></article>
+            <article><b>2</b><span>API와 백엔드는 화면 뒤에서 규칙을 처리한다.</span></article>
+            <article><b>3</b><span>DB는 고객, 주문, 결제 같은 기록이 남는 곳이다.</span></article>
+            <article><b>4</b><span>Git, 서버, 배포가 있어야 운영 가능한 서비스가 된다.</span></article>
           </div>
         </div>
       </section>
 
-      <section class="slide part-slide part-intro-slide" data-part="2부" data-title="채용 핵심" data-purpose="우리 서비스에 필요한 기능을 먼저 정리하고 면접 질문과 답변 기준으로 연결한다">
+      <section class="slide part-slide part-intro-slide deck-part deck-part-2" data-part="2부" data-title="채용 핵심" data-purpose="우리 서비스에 필요한 기능을 먼저 정리하고 면접 질문과 답변 기준으로 연결한다">
         <div class="part-chip">2부 · 채용</div>
         <h2>채용은 우리 서비스에 필요한 기능부터 정리한다</h2>
-        <div class="stage-scenario hero-scenario hiring-stage">
+        <div class="stage-scenario hero-scenario hiring-stage part-hero-scene">
           <div class="scenario-visual">
             <span class="scene-label">면접 장면</span>
             <strong>"채팅 기능 해봤습니다"</strong>
             <p>우리 서비스에 필요한 기능과 연결되지 않으면 판단 기준이 흔들린다.</p>
           </div>
-          <div class="ask-stack">
+          <div class="ask-stack deck-grid deck-grid-3">
             <article><span>1단계</span><strong>우리 서비스에 필요한 기능 정리</strong></article>
             <article><span>2단계</span><strong>그 기능을 확인할 면접 질문 정리</strong></article>
             <article class="strong"><span>3단계</span><strong>좋은 답변을 찾고 이끌어낸다</strong></article>
@@ -485,12 +506,12 @@
         </div>
       </section>
 
-      <section class="slide" data-part="2부" data-title="기능 경험 매칭" data-purpose="우리 서비스 핵심 기능과 후보 경험을 직접 연결해 합격 기준을 만든다">
+      <section class="slide deck-part deck-part-2" data-part="2부" data-title="기능 경험 매칭" data-purpose="우리 서비스 핵심 기능과 후보 경험을 직접 연결해 합격 기준을 만든다">
         <div class="slide-head">
           <p class="eyebrow">1. 필요한 기능 정리</p>
           <h2>우리 서비스에 필요한 기능 경험부터 정리한다</h2>
         </div>
-        <div class="feature-match-board">
+        <div class="feature-match-board deck-grid deck-grid-4">
           <article class="target"><span>우리 핵심</span><strong>예약 변경</strong><em>상태값 · 알림 · 취소 기준</em></article>
           <article><span>후보 A</span><strong>채팅 UI</strong><em>매칭 약함</em></article>
           <article class="fit"><span>후보 B</span><strong>관리자 권한</strong><em>매칭 강함</em></article>
@@ -499,12 +520,12 @@
         <div class="speaker-line"><strong>대표 판단</strong><span>먼저 우리 서비스 핵심 기능을 적어야, 후보 경험이 필요한 경험인지 판단할 수 있다.</span></div>
       </section>
 
-      <section class="slide" data-part="2부" data-title="면접 질문 프레임" data-purpose="후보자의 말에서 실제 역할과 깊이를 분리해내는 질문 순서">
+      <section class="slide deck-part deck-part-2" data-part="2부" data-title="면접 질문 프레임" data-purpose="후보자의 말에서 실제 역할과 깊이를 분리해내는 질문 순서">
         <div class="slide-head">
           <p class="eyebrow">2. 면접 질문 정리</p>
           <h2>필요한 기능을 면접 질문으로 바꾼다</h2>
         </div>
-        <div class="question-ladder">
+        <div class="question-ladder deck-grid deck-grid-5 ordered-grid">
           <article><span>01</span><strong>무슨 서비스?</strong><em>목적 · 사용자</em></article>
           <article><span>02</span><strong>본인 역할?</strong><em>화면 · API · DB</em></article>
           <article><span>03</span><strong>직접 만든 기능?</strong><em>입력 · 처리 · 저장</em></article>
@@ -522,24 +543,24 @@
         </div>
       </section>
 
-      <section class="slide" data-part="2부" data-title="좋은 답 나쁜 답" data-purpose="답변의 구체성과 본인 역할 여부로 후보 허수를 거른다">
+      <section class="slide deck-part deck-part-2" data-part="2부" data-title="좋은 답 나쁜 답" data-purpose="답변의 구체성과 본인 역할 여부로 후보 허수를 거른다">
         <div class="slide-head">
           <p class="eyebrow">3. 좋은 답변 찾고 이끌기</p>
           <h2>좋은 답변은 역할과 근거가 보인다</h2>
         </div>
-        <div class="answer-theater">
+        <div class="answer-theater deck-grid deck-grid-2">
           <article class="bad-answer"><span>흐린 답</span><strong>"팀에서 결제 연동했습니다."</strong><em>본인 역할이 안 보임</em></article>
           <article class="good-answer"><span>좋은 답</span><strong>"저는 실패 화면과 재시도 안내를 맡았습니다."</strong><em>맡은 범위가 보임</em></article>
         </div>
         <div class="ask-next"><strong>대표 판단 기준</strong><span>고객에게 보이는 실패 화면까지 설명하면 실제 구현 경험에 가깝다.</span></div>
       </section>
 
-      <section class="slide" data-part="2부" data-title="신입 주니어 판단" data-purpose="신입과 주니어의 답변에서 구체성과 위험 신호를 구분한다">
+      <section class="slide deck-part deck-part-2" data-part="2부" data-title="신입 주니어 판단" data-purpose="신입과 주니어의 답변에서 구체성과 위험 신호를 구분한다">
         <div class="slide-head">
           <p class="eyebrow">3. 좋은 답변 찾고 이끌기</p>
           <h2>작은 상황 질문을 하면 답변이 구체해진다</h2>
         </div>
-        <div class="mission-board">
+        <div class="mission-board deck-grid deck-grid-3">
           <article class="mission-main"><span>면접 질문 예시</span><strong>관리자 목록에 상태 필터가 필요했다면?</strong><p>어떤 화면 · 데이터 · 예외를 먼저 확인할지 묻는다</p></article>
           <article><span>신입에게 볼 것</span><strong>순서를 말하는가</strong></article>
           <article><span>주니어에게 볼 것</span><strong>예외를 떠올리는가</strong></article>
@@ -548,12 +569,12 @@
         <div class="speaker-line"><strong>대표 판단</strong><span>실제 일을 시키지 않고도, 후보가 기능을 어떤 순서로 생각하는지 말로 확인한다.</span></div>
       </section>
 
-      <section class="slide" data-part="2부" data-title="포트폴리오 질문 검증" data-purpose="포트폴리오 결과물보다 후보가 설명하는 역할·예외·결정 이유를 검증한다">
+      <section class="slide deck-part deck-part-2" data-part="2부" data-title="포트폴리오 질문 검증" data-purpose="포트폴리오 결과물보다 후보가 설명하는 역할·예외·결정 이유를 검증한다">
         <div class="slide-head">
           <p class="eyebrow">3. 좋은 답변 찾고 이끌기</p>
           <h2>포트폴리오는 질문으로 검증한다</h2>
         </div>
-        <div class="test-stations">
+        <div class="test-stations deck-grid deck-grid-4 ordered-grid">
           <article><span>01</span><strong>본인 역할 확인</strong></article>
           <article><span>02</span><strong>어려웠던 예외 질문</strong></article>
           <article><span>03</span><strong>수정한 이유 확인</strong></article>
@@ -563,10 +584,10 @@
         <div class="judge-strip"><span>역할·예외·수정 이유를 같이 본다</span><span>결과물은 있는데 본인 판단을 설명 못 하면 보류</span></div>
       </section>
 
-      <section class="slide qa-slide" data-title="2부 정리" data-purpose="면접 전에 핵심 기능·검증 질문·합격 기준을 작성한다">
+      <section class="slide qa-slide deck-part deck-part-2" data-title="2부 정리" data-purpose="면접 전에 핵심 기능·검증 질문·합격 기준을 작성한다">
         <p class="eyebrow">2부 체크</p>
         <h2>채용 전 이 순서로 정리한다</h2>
-        <div class="worksheet-stage">
+        <div class="worksheet-stage deck-grid deck-grid-3 ordered-grid">
           <article><span>1</span><strong>필요 기능</strong><em>__________</em></article>
           <article><span>2</span><strong>면접 질문</strong><em>__________</em></article>
           <article><span>3</span><strong>답변 기준</strong><em>__________</em></article>
@@ -574,16 +595,16 @@
         <div class="speaker-line"><strong>작성 예시</strong><span>"결제 경험자는 성공보다 실패, 취소, 환불, 중복 결제를 설명할 수 있어야 한다."</span></div>
       </section>
 
-      <section class="slide part-slide part-intro-slide" data-part="3부" data-title="외주 핵심" data-purpose="외주를 직원처럼 맡기는 게 아니라 문서 기준 제작으로 본다">
+      <section class="slide part-slide part-intro-slide deck-part deck-part-3" data-part="3부" data-title="외주 핵심" data-purpose="외주를 직원처럼 맡기는 게 아니라 문서 기준 제작으로 본다">
         <div class="part-chip">3부 · 외주</div>
         <h2>차 살 때처럼 옵션표와 검수표가 필요하다</h2>
-        <div class="stage-scenario hero-scenario outsource-stage">
+        <div class="stage-scenario hero-scenario outsource-stage part-hero-scene">
           <div class="scenario-visual">
             <span class="scene-label">외주 발주 장면</span>
             <strong>"알아서 잘 만들어 주세요"</strong>
             <p>이 말은 견적, 범위, 검수 기준을 모두 흔든다.</p>
           </div>
-          <div class="ask-stack">
+          <div class="ask-stack deck-grid deck-grid-3">
             <article><span>대표가 정할 것</span><strong>목표 · 범위 · 우선순위</strong></article>
             <article><span>외주가 줄 것</span><strong>제작 방식 · 일정 · 비용</strong></article>
             <article class="strong"><span>계약에 남길 것</span><strong>검수 기준 · 소유권 · 유지보수</strong></article>
@@ -591,12 +612,12 @@
         </div>
       </section>
 
-      <section class="slide" data-part="3부" data-title="역할 분리" data-purpose="대표·외주사·공동 결정 영역을 분리해 추측 개발을 막는다">
+      <section class="slide deck-part deck-part-3" data-part="3부" data-title="역할 분리" data-purpose="대표·외주사·공동 결정 영역을 분리해 추측 개발을 막는다">
         <div class="slide-head">
           <p class="eyebrow">역할 분리</p>
           <h2>대표가 안 정하면 외주사가 추측한다</h2>
         </div>
-        <div class="role-split-stage">
+        <div class="role-split-stage deck-grid deck-grid-3">
           <article class="owner"><span>대표</span><strong>무엇을 만들지</strong><em>고객 흐름 · 제외 기능 · 우선순위</em></article>
           <article class="vendor"><span>외주사</span><strong>어떻게 만들지</strong><em>기술 방식 · 일정 · 비용</em></article>
           <article class="shared"><span>같이 확인</span><strong>완료 기준</strong><em>성공 · 실패 · 권한 · 변경</em></article>
@@ -604,12 +625,12 @@
         <div class="speaker-line"><strong>대표 질문</strong><span>"이 항목의 최종 결정권자는 누구이고, 변경 시 누가 승인하나요?"</span></div>
       </section>
 
-      <section class="slide" data-part="3부" data-title="MVP 범위" data-purpose="처음 만들 기능과 나중으로 미룰 기능을 분리해 비용 폭발을 막는다">
+      <section class="slide deck-part deck-part-3" data-part="3부" data-title="MVP 범위" data-purpose="처음 만들 기능과 나중으로 미룰 기능을 분리해 비용 폭발을 막는다">
         <div class="slide-head">
           <p class="eyebrow">MVP</p>
           <h2>처음부터 완성품을 외주로 만들려 하지 않는다</h2>
         </div>
-        <div class="mvp-stage">
+        <div class="mvp-stage deck-grid deck-grid-4">
           <article class="must"><span>넣기</span><strong>신청 → 결제 → 완료</strong></article>
           <article><span>빼기</span><strong>고급 통계</strong></article>
           <article><span>미루기</span><strong>복잡한 쿠폰</strong></article>
@@ -618,12 +639,12 @@
         <div class="speaker-line"><strong>대표 질문</strong><span>"이번 버전에서 고객이 반드시 끝까지 해야 하는 1개 흐름은 무엇인가요?"</span></div>
       </section>
 
-      <section class="slide" data-part="3부" data-title="요구사항 문서" data-purpose="실제 문서에 들어갈 성공·실패·권한·상태 문장을 보여준다">
+      <section class="slide deck-part deck-part-3" data-part="3부" data-title="요구사항 문서" data-purpose="실제 문서에 들어갈 성공·실패·권한·상태 문장을 보여준다">
         <div class="slide-head">
           <p class="eyebrow">요구사항</p>
           <h2>기능명보다 고객 시나리오를 보여준다</h2>
         </div>
-        <div class="flow-scenario">
+        <div class="flow-scenario deck-grid deck-grid-5 ordered-grid">
           <article><span>고객 행동</span><strong>결제 버튼 클릭</strong></article>
           <article><span>처리 중</span><strong>버튼 잠금 + 로딩</strong></article>
           <article><span>성공</span><strong>주문번호 표시</strong></article>
@@ -633,12 +654,12 @@
         <div class="speaker-line"><strong>문서 공식</strong><span>사용자가 [행동]하면, 성공 시 [결과], 실패 시 [문구]를 보여준다.</span></div>
       </section>
 
-      <section class="slide" data-part="3부" data-title="검수 기준" data-purpose="납품 후 말싸움이 아니라 계약 전 체크리스트로 검수 기준을 만든다">
+      <section class="slide deck-part deck-part-3" data-part="3부" data-title="검수 기준" data-purpose="납품 후 말싸움이 아니라 계약 전 체크리스트로 검수 기준을 만든다">
         <div class="slide-head">
           <p class="eyebrow">검수</p>
           <h2>검수 기준은 계약 전에 적는다</h2>
         </div>
-        <div class="acceptance-stage">
+        <div class="acceptance-stage deck-grid deck-grid-5 ordered-grid">
           <article class="acceptance-main"><span>대표가 직접 클릭</span><strong>고객 주문 성공</strong></article>
           <article><span>실패</span><strong>결제 실패</strong></article>
           <article><span>취소</span><strong>주문 취소</strong></article>
@@ -648,12 +669,12 @@
         <div class="speaker-line"><strong>검수 문장</strong><span>"성공만 동작하면 완료가 아닙니다. 실패·권한·저장까지 확인합니다."</span></div>
       </section>
 
-      <section class="slide" data-part="3부" data-title="계약 범위" data-purpose="포함과 제외를 함께 적어 추가 비용과 일정 분쟁을 줄인다">
+      <section class="slide deck-part deck-part-3" data-part="3부" data-title="계약 범위" data-purpose="포함과 제외를 함께 적어 추가 비용과 일정 분쟁을 줄인다">
         <div class="slide-head">
           <p class="eyebrow">계약</p>
           <h2>포함과 제외를 같이 써야 분쟁이 줄어든다</h2>
         </div>
-        <div class="scope-stage">
+        <div class="scope-stage deck-grid deck-grid-3">
           <article class="include"><span>포함</span><strong>12개 화면<br>관리자 3개<br>수정 2회</strong></article>
           <article class="exclude"><span>제외</span><strong>신규 기능<br>PG 계약<br>문자 발송비</strong></article>
           <article class="change"><span>변경</span><strong>요청서<br>추가 견적<br>일정 영향</strong></article>
@@ -661,12 +682,12 @@
         <div class="speaker-line"><strong>대표 질문</strong><span>"이 기능은 포함인가요, 제외인가요, 변경 요청인가요?"</span></div>
       </section>
 
-      <section class="slide" data-part="3부" data-title="소유권과 계정" data-purpose="Git·서버·도메인·배포 계정이 회사 자산으로 남게 한다">
+      <section class="slide deck-part deck-part-3" data-part="3부" data-title="소유권과 계정" data-purpose="Git·서버·도메인·배포 계정이 회사 자산으로 남게 한다">
         <div class="slide-head">
           <p class="eyebrow">소유권</p>
           <h2>소스코드와 계정은 회사가 소유해야 한다</h2>
         </div>
-        <div class="ownership-stage">
+        <div class="ownership-stage deck-grid deck-grid-4 ordered-grid">
           <article><span>중도금 전</span><strong>Git 저장소</strong></article>
           <article><span>잔금 전</span><strong>서버 계정</strong></article>
           <article><span>오픈 전</span><strong>도메인 / DNS</strong></article>
@@ -675,12 +696,12 @@
         <div class="speaker-line"><strong>문서 문장</strong><span>"소스코드, 배포 문서, 서버 접근 권한은 회사 계정으로 이전한다."</span></div>
       </section>
 
-      <section class="slide" data-part="3부" data-title="유지보수" data-purpose="오픈 이후의 비용·범위·응답 시간을 계약 기준으로 만든다">
+      <section class="slide deck-part deck-part-3" data-part="3부" data-title="유지보수" data-purpose="오픈 이후의 비용·범위·응답 시간을 계약 기준으로 만든다">
         <div class="slide-head">
           <p class="eyebrow">유지보수</p>
           <h2>오픈 이후 비용과 대응 시간을 먼저 정한다</h2>
         </div>
-        <div class="maintenance-stage">
+        <div class="maintenance-stage deck-grid deck-grid-3">
           <article class="urgent"><span>긴급 장애</span><strong>30분 접수<br>4시간 1차 조치</strong></article>
           <article><span>일반 오류</span><strong>영업일 2일 내 응답</strong></article>
           <article><span>신규 기능</span><strong>별도 견적</strong></article>
@@ -688,169 +709,197 @@
         <div class="speaker-line"><strong>대표 질문</strong><span>"이건 버그인가요, 신규 기능인가요?"</span></div>
       </section>
 
-      <section class="slide" data-part="3부" data-title="장애 대응" data-purpose="장애 발생 시 누가 언제 무엇을 하는지 문서로 정한다">
-        <div class="slide-head">
-          <p class="eyebrow">장애 대응</p>
-          <h2>장애는 "누가 언제 무엇을"으로 정한다</h2>
-        </div>
-        <div class="incident-stage">
-          <article><span>감지</span><strong>즉시 기록</strong></article>
-          <article><span>공유</span><strong>30분 내</strong></article>
-          <article class="urgent"><span>1차 조치</span><strong>4시간 내</strong></article>
-          <article><span>복구</span><strong>화면 클릭 확인</strong></article>
-          <article><span>보고</span><strong>원인·재발 방지</strong></article>
-        </div>
-        <div class="speaker-line"><strong>장애 보고 양식</strong><span>현재 증상 / 영향 고객 / 임시 조치 / 다음 보고 시간</span></div>
-      </section>
-
-      <section class="slide qa-slide" data-title="3부 정리" data-purpose="외주 발주 전에 대표가 최종 확인해야 할 항목을 체크한다">
+      <section class="slide qa-slide deck-part deck-part-3" data-title="3부 정리" data-purpose="외주 발주 전에 대표가 최종 확인해야 할 항목을 체크한다">
         <p class="eyebrow">3부 체크</p>
-        <h2>외주는 이 다섯 칸이 계약서에 있어야 한다</h2>
-        <div class="contract-stage">
+        <h2>외주 계약서는 다섯 가지를 확인한다</h2>
+        <div class="contract-stage deck-grid deck-grid-5 ordered-grid">
           <article><span>범위</span><strong>포함 / 제외</strong></article>
           <article><span>검수</span><strong>실패 / 권한</strong></article>
           <article><span>소유권</span><strong>회사 계정</strong></article>
           <article><span>유지보수</span><strong>월 비용</strong></article>
           <article><span>장애</span><strong>대응 시간</strong></article>
         </div>
-        <div class="speaker-line"><strong>계약서 문장</strong><span>"긴급 장애는 30분 내 접수 사실을 공유하고 4시간 내 1차 조치 방향을 보고한다."</span></div>
-        <div class="write-lines"><span>핵심 기능: __________</span><span>실패 기준: __________</span><span>소유권 문장: __________</span></div>
+        <div class="speaker-line"><strong>마지막 확인</strong><span>범위는 포함/제외로, 검수는 실패/권한으로, 소유권은 회사 계정으로, 유지보수는 월 비용으로, 장애는 대응 시간으로 남긴다.</span></div>
       </section>
 
-      <section class="slide part-slide part-intro-slide codex-install" data-part="4부" data-title="Codex 앱 소개" data-purpose="Codex 앱이 무엇이고 어떤 상황에 쓰는지 먼저 설명한다">
+            <section class="slide part-slide part-intro-slide codex-install deck-part deck-part-4" data-part="4부" data-title="Codex 앱 소개" data-purpose="Codex 앱이 무엇이고 어떤 상황에 쓰는지 먼저 설명한다">
         <div class="part-chip">4부 · Codex 설치</div>
-        <h2>Codex 앱은 내 컴퓨터에서 함께 일하는 개발 보조 도구다</h2>
-        <div class="codex-install-hero">
-          <article class="codex-path-card primary">
-            <span>무엇인가</span>
-            <strong>AI 개발 에이전트</strong>
-            <em>프로젝트 폴더를 읽고 수정 방향을 제안한다</em>
-          </article>
-          <article class="codex-path-card">
-            <span>어디서 쓰나</span>
-            <strong>Windows 앱</strong>
-            <em>설치 후 앱 화면에서 프로젝트별로 대화한다</em>
-          </article>
-          <article class="codex-path-card">
-            <span>무엇을 하나</span>
-            <strong>읽기 · 수정 · 확인</strong>
-            <em>코드 설명, 작은 수정, 테스트 실행을 도와준다</em>
-          </article>
+        <h2>Codex 앱은 함께 일하는 개발 도구다</h2>
+        <div class="codex-visual-layout">
+          <div class="codex-visual-panel">
+            <div class="mock-window mock-codex-app">
+              <div class="mock-titlebar"><span></span><span></span><span></span><strong>Codex</strong></div>
+              <div class="mock-sidebar"><b>Projects</b><span>homepage-renewal</span><span>store-demo</span><span>contract-check</span></div>
+              <div class="mock-thread">
+                <p class="mock-user">이 폴더가 어떤 프로젝트인지 설명해줘</p>
+                <p class="mock-agent">파일 구조를 읽고 화면, 데이터, 배포 흐름을 요약했습니다.</p>
+                <div class="mock-diff"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="codex-side-notes">
+            <article><span>정의</span><strong>프로젝트 폴더를 읽고 같이 작업하는 AI 개발 에이전트</strong></article>
+            <article><span>위치</span><strong>Windows 앱에서 프로젝트별 대화로 사용</strong></article>
+            <article><span>목표</span><strong>설치, 로그인, 폴더 연결까지 한 번에 실습</strong></article>
+          </div>
         </div>
-        <div class="speaker-line"><strong>오늘 목표</strong><span>Codex 앱이 무엇인지 이해하고, 설치 후 ChatGPT 계정과 연결해 프로젝트 폴더를 여는 상태까지 간다.</span></div>
       </section>
 
-      <section class="slide codex-install" data-part="4부" data-title="활용 예시" data-purpose="Codex 앱을 설치한 뒤 바로 써볼 수 있는 대표 활용 방안을 보여준다">
+      <section class="slide codex-install deck-part deck-part-4" data-part="4부" data-title="활용 예시" data-purpose="Codex 앱을 설치한 뒤 바로 써볼 수 있는 대표 활용 방안을 보여준다">
         <div class="slide-head">
           <p class="eyebrow">Step 1</p>
-          <h2>설치 후에는 이런 일부터 시켜볼 수 있다</h2>
+          <h2>설치 후에는 이런 일을 시켜볼 수 있다</h2>
         </div>
-        <div class="codex-choice-grid">
-          <article class="recommended"><span>이해</span><strong>프로젝트 구조 설명</strong><em>이 폴더가 어떤 서비스인지 쉽게 설명해달라고 묻는다</em></article>
-          <article><span>개선</span><strong>문구·화면 수정</strong><em>작은 UI 문구, 버튼 이름, 안내 문장을 바꿔본다</em></article>
-          <article><span>검증</span><strong>오류 원인 찾기</strong><em>에러 메시지와 실행 결과를 보고 원인을 정리한다</em></article>
+        <div class="codex-showcase-grid">
+          <div class="codex-visual-panel soft">
+            <div class="mock-flow-cards">
+              <div><b>1</b><strong>읽기</strong><span>폴더 구조 설명</span></div>
+              <div><b>2</b><strong>고치기</strong><span>문구와 화면 수정</span></div>
+              <div><b>3</b><strong>확인</strong><span>오류 원인과 테스트</span></div>
+            </div>
+          </div>
+          <div class="codex-side-notes compact">
+            <article><span>처음 질문</span><strong>이 폴더가 어떤 서비스인지 설명해줘</strong></article>
+            <article><span>작은 수정</span><strong>버튼 이름과 안내 문구를 더 쉽게 바꿔줘</strong></article>
+            <article><span>확인 요청</span><strong>오류 메시지의 원인을 쉬운 말로 정리해줘</strong></article>
+          </div>
         </div>
-        <div class="speaker-line"><strong>대표 멘트</strong><span>"처음부터 큰 개발을 맡기기보다 설명, 작은 수정, 오류 확인 순서로 익숙해지면 됩니다."</span></div>
       </section>
 
-      <section class="slide codex-install" data-part="4부" data-title="설치 전 필요 사항" data-purpose="Codex 앱 설치 전 반드시 준비해야 할 계정과 환경을 확인한다">
+      <section class="slide codex-install deck-part deck-part-4" data-part="4부" data-title="설치 전 필요 사항" data-purpose="Codex 앱 설치 전 반드시 준비해야 할 계정과 환경을 확인한다">
         <div class="slide-head">
           <p class="eyebrow">Step 2</p>
           <h2>설치 전에 ChatGPT 계정이 필요하다</h2>
         </div>
-        <div class="codex-prep-grid">
-          <article><span>필수</span><strong>ChatGPT 회원가입</strong><em>Codex 앱 첫 실행 때 ChatGPT 계정으로 로그인한다</em></article>
-          <article><span>권장</span><strong>Windows 최신 업데이트</strong><em>Windows 11이 가장 안정적이고, Windows 10은 최신 상태가 좋다</em></article>
-          <article><span>있으면 좋음</span><strong>Git 설치</strong><em>프로젝트 변경 이력을 확인하고 되돌리기 쉬워진다</em></article>
+        <div class="codex-showcase-grid">
+          <div class="codex-visual-panel">
+            <div class="mock-account-card">
+              <div class="mock-avatar chatgpt-avatar"><img src="./assets/logos/chatgpt.png" alt="ChatGPT 로고"></div>
+              <strong>ChatGPT 계정</strong>
+              <span>Codex 앱 로그인에 사용</span>
+              <div class="mock-checkline"><b></b>이메일과 비밀번호 확인</div>
+              <div class="mock-checkline"><b></b>브라우저 로그인 가능 여부 확인</div>
+              <div class="mock-checkline"><b></b>Windows 업데이트 확인</div>
+            </div>
+          </div>
+          <div class="codex-side-notes compact">
+            <article><span>필수</span><strong>ChatGPT 회원가입과 로그인</strong></article>
+            <article><span>권장</span><strong>Windows 최신 업데이트</strong></article>
+            <article><span>선택</span><strong>Git이 있으면 변경 이력 확인이 쉽다</strong></article>
+          </div>
         </div>
-        <div class="speaker-line"><strong>강조</strong><span>ChatGPT 회원가입과 로그인은 필수로 설명한다. 앱만 설치해도 계정 연결 전에는 제대로 시작할 수 없다.</span></div>
       </section>
 
-      <section class="slide codex-install" data-part="4부" data-title="구글 검색" data-purpose="구글에서 Codex app을 검색해 공식 설치 경로로 들어간다">
+      <section class="slide codex-install deck-part deck-part-4" data-part="4부" data-title="스토어 설치" data-purpose="Microsoft Store에서 Codex 앱을 검색하고 다운로드한다">
         <div class="slide-head">
           <p class="eyebrow">Step 3</p>
-          <h2>구글에서 Codex app을 검색한다</h2>
+          <h2>Codex 앱을 설치한다</h2>
         </div>
-        <div class="codex-step-board">
-          <article><span>01</span><strong>Google 열기</strong><em>브라우저 주소창이나 검색창 사용</em></article>
-          <article><span>02</span><strong>codex app 검색</strong><em>영문으로 검색하면 공식 결과를 찾기 쉽다</em></article>
-          <article><span>03</span><strong>OpenAI 공식 결과 선택</strong><em>developers.openai.com 또는 openai.com 경로 확인</em></article>
-          <article><span>04</span><strong>광고 피하기</strong><em>비공식 다운로드 파일은 누르지 않는다</em></article>
+        <div class="codex-visual-layout">
+          <div class="codex-visual-panel">
+            <div class="mock-codex-download">
+              <div class="codex-download-logo">
+                <img src="./assets/logos/codex-app.png" alt="Codex 로고">
+              </div>
+              <div class="codex-download-arrow" aria-hidden="true"></div>
+              <div class="codex-download-target">
+                <strong>Codex</strong>
+                <span>Microsoft Store에서 받기</span>
+              </div>
+            </div>
+          </div>
+          <div class="codex-side-notes">
+            <article><span>1</span><strong>시작 메뉴에서 Microsoft Store 열기</strong></article>
+            <article><span>2</span><strong>검색창에 Codex 또는 OpenAI Codex 입력</strong></article>
+            <article><span>3</span><strong>앱을 확인한 뒤 다운로드하고 실행</strong></article>
+          </div>
         </div>
-        <div class="speaker-line"><strong>검색어</strong><span><code>codex app</code> 또는 <code>openai codex app windows</code>로 검색한다.</span></div>
       </section>
 
-      <section class="slide codex-install" data-part="4부" data-title="Codex 앱 설치" data-purpose="공식 Codex 페이지에서 Microsoft Store로 이동해 앱을 설치한다">
+      <section class="slide codex-install deck-part deck-part-4" data-part="4부" data-title="ChatGPT 연동" data-purpose="Codex 앱 첫 실행 후 ChatGPT 계정과 연결한다">
         <div class="slide-head">
           <p class="eyebrow">Step 4</p>
-          <h2>공식 페이지에서 Windows 앱을 설치한다</h2>
-        </div>
-        <div class="codex-step-board compact">
-          <article><span>01</span><strong>Windows 앱 버튼</strong><em>공식 페이지에서 Windows 설치 버튼을 누른다</em></article>
-          <article><span>02</span><strong>Microsoft Store</strong><em>Store 화면으로 넘어가면 설치를 누른다</em></article>
-          <article><span>03</span><strong>Codex 열기</strong><em>설치 후 Open 또는 시작 메뉴에서 실행한다</em></article>
-        </div>
-        <div class="speaker-line"><strong>대체 경로</strong><span>스토어가 바로 열리지 않으면 PowerShell에서 <code>winget install Codex -s msstore</code>를 사용할 수 있다.</span></div>
-      </section>
-
-      <section class="slide codex-install" data-part="4부" data-title="ChatGPT 연동" data-purpose="Codex 앱 첫 실행 후 ChatGPT 계정과 연결한다">
-        <div class="slide-head">
-          <p class="eyebrow">Step 5</p>
           <h2>Codex 앱을 ChatGPT 계정과 연동한다</h2>
         </div>
-        <div class="codex-route-split">
-          <article class="native"><span>로그인</span><strong>Sign in with ChatGPT</strong><em>브라우저 로그인 창이 열리면 ChatGPT 계정으로 인증한다</em></article>
-          <article class="wsl"><span>복귀</span><strong>Codex 앱으로 돌아오기</strong><em>인증이 끝나면 앱에서 계정과 워크스페이스를 확인한다</em></article>
-        </div>
-        <div class="codex-note-strip">
-          <span>ChatGPT 회원가입</span>
-          <span>브라우저 인증</span>
-          <span>앱으로 복귀</span>
+        <div class="codex-showcase-grid">
+          <div class="codex-visual-panel">
+            <div class="mock-auth-flow">
+              <div><b>1</b><strong>Codex 앱</strong><span>Sign in with ChatGPT</span></div>
+              <div><b>2</b><strong>브라우저</strong><span>ChatGPT 계정 인증</span></div>
+              <div><b>3</b><strong>앱 복귀</strong><span>워크스페이스 확인</span></div>
+            </div>
+          </div>
+          <div class="codex-side-notes compact">
+            <article><span>주의</span><strong>로그인 창이 브라우저로 열릴 수 있다</strong></article>
+            <article><span>확인</span><strong>인증 후 Codex 앱으로 돌아왔는지 본다</strong></article>
+          </div>
         </div>
       </section>
 
-      <section class="slide codex-install" data-part="4부" data-title="프로젝트 폴더 생성" data-purpose="Codex 앱에 연결할 작업 폴더를 바탕화면에 만든다">
+      <section class="slide codex-install deck-part deck-part-4" data-part="4부" data-title="프로젝트 폴더 생성" data-purpose="Codex 앱에 연결할 작업 폴더를 바탕화면에 만든다">
         <div class="slide-head">
-          <p class="eyebrow">Step 6</p>
+          <p class="eyebrow">Step 5</p>
           <h2>먼저 바탕화면에 프로젝트 폴더를 만든다</h2>
         </div>
-        <div class="codex-run-grid">
-          <article><span>1</span><strong>바탕화면 열기</strong><em>바탕화면으로 이동</em></article>
-          <article><span>2</span><strong>새 폴더 만들기</strong><em>예: My Codex Project</em></article>
-          <article><span>3</span><strong>파일 넣기</strong><em>홈페이지, 문서, 코드 파일을 넣어둔다</em></article>
-          <article><span>4</span><strong>이름 정리</strong><em>프로젝트 목적이 보이게 폴더명을 정한다</em></article>
+        <div class="codex-visual-layout">
+          <div class="codex-visual-panel">
+            <div class="mock-desktop">
+              <div class="mock-folder"><span></span><strong>homepage-renewal</strong></div>
+              <div class="mock-file">기획서.pdf</div>
+              <div class="mock-file">대표사진.jpg</div>
+              <div class="mock-file">로고.png</div>
+            </div>
+          </div>
+          <div class="codex-side-notes">
+            <article><span>1</span><strong>바탕화면에서 새 폴더 만들기</strong></article>
+            <article><span>2</span><strong>프로젝트 목적이 보이게 이름 정하기</strong></article>
+            <article><span>3</span><strong>기획서와 사진 자료 넣어보기</strong></article>
+          </div>
         </div>
-        <div class="speaker-line"><strong>폴더 예시</strong><span><code>바탕화면\homepage-renewal</code>처럼 바탕화면에 한 프로젝트당 한 폴더를 만든다.</span></div>
       </section>
 
-      <section class="slide codex-install" data-part="4부" data-title="Codex에 폴더 연결" data-purpose="Codex 앱에서 프로젝트 폴더를 추가하고 첫 질문을 보낸다">
+      <section class="slide codex-install deck-part deck-part-4" data-part="4부" data-title="Codex에 폴더 연결" data-purpose="Codex 앱에서 프로젝트 폴더를 추가하고 첫 질문을 보낸다">
         <div class="slide-head">
-          <p class="eyebrow">Step 7</p>
+          <p class="eyebrow">Step 6</p>
           <h2>Codex 앱에서 프로젝트 폴더를 추가한다</h2>
         </div>
-        <div class="codex-run-grid">
-          <article><span>1</span><strong>Add project</strong><em>Codex 앱에서 프로젝트 추가를 누른다</em></article>
-          <article><span>2</span><strong>폴더 선택</strong><em>방금 바탕화면에 만든 프로젝트 폴더를 선택한다</em></article>
-          <article><span>3</span><strong>첫 질문</strong><em>"이 폴더에 무엇이 있는지 설명해줘"</em></article>
-          <article><span>4</span><strong>작은 요청</strong><em>문구 수정, 파일 정리 같은 작업부터 시작한다</em></article>
+        <div class="codex-visual-layout">
+          <div class="codex-visual-panel">
+            <div class="mock-window mock-codex-app wide">
+              <div class="mock-titlebar"><span></span><span></span><span></span><strong>Codex</strong></div>
+              <div class="mock-connect">
+                <button>Add project</button>
+                <div class="mock-path">Desktop / homepage-renewal</div>
+                <p>"이 기획서와 사진으로 홈페이지 초안을 만들어줘."</p>
+              </div>
+            </div>
+          </div>
+          <div class="codex-side-notes">
+            <article><span>1</span><strong>Add project 선택</strong></article>
+            <article><span>2</span><strong>바탕화면의 프로젝트 폴더 연결</strong></article>
+            <article><span>3</span><strong>기획서와 제공 사진으로 Codex에 요청</strong></article>
+          </div>
         </div>
-        <div class="speaker-line"><strong>안전 기준</strong><span>처음에는 설명 요청으로 시작하고, 큰 변경은 어떤 파일을 바꿀지 먼저 물어본다.</span></div>
       </section>
 
-      <section class="slide qa-slide codex-install" data-title="4부 정리" data-purpose="Windows에서 Codex 앱 설치 후 확인해야 할 항목을 체크한다">
+      <section class="slide qa-slide codex-install deck-part deck-part-4" data-title="4부 정리" data-purpose="Windows에서 Codex 앱 설치 후 확인해야 할 항목을 체크한다">
         <p class="eyebrow">4부 체크</p>
         <h2>Codex 앱 설치 흐름은 이 순서로 설명한다</h2>
-        <div class="codex-check-grid">
-          <article><span>준비</span><strong>ChatGPT 가입</strong></article>
-          <article><span>검색</span><strong>codex app</strong></article>
-          <article><span>설치</span><strong>Microsoft Store</strong></article>
-          <article><span>연동</span><strong>ChatGPT 로그인</strong></article>
-          <article><span>시작</span><strong>바탕화면 폴더</strong></article>
+        <div class="codex-summary-strip">
+          <span><b>1</b>ChatGPT 가입</span>
+          <span><b>2</b>Store에서 설치</span>
+          <span><b>3</b>ChatGPT 로그인</span>
+          <span><b>4</b>프로젝트 폴더 연결</span>
         </div>
-        <div class="speaker-line"><strong>대표가 기억할 문장</strong><span>"회원가입을 먼저 끝내고, 구글에서 공식 Codex 앱 페이지를 찾아 설치한 뒤, 내 프로젝트 폴더를 연결한다."</span></div>
+        <div class="codex-visual-panel summary">
+          <div class="mock-final-note">
+            <strong>대표가 기억할 문장</strong>
+            <p>"회원가입을 먼저 끝내고, Microsoft Store에서 Codex 앱을 설치한 뒤, 내 프로젝트 폴더를 연결한다."</p>
+          </div>
+        </div>
       </section>
 
-      <section class="slide closing" data-title="마무리">
+<section class="slide closing" data-title="마무리">
         <p class="eyebrow">Closing</p>
         <h2>대표가 가져갈 6가지</h2>
         <div class="closing-grid">
@@ -859,7 +908,7 @@
           <article><strong>3</strong><span>채용은 프로젝트명이 아니라 기능 경험으로 검증한다.</span></article>
           <article><strong>4</strong><span>외주는 제작이고, 대표는 범위와 기준을 맡는다.</span></article>
           <article><strong>5</strong><span>소스코드, 서버, 계정, 유지보수는 계약서에 적는다.</span></article>
-          <article><strong>6</strong><span>Codex 앱은 공식 사이트에서 Windows 설치 화면으로 들어가 받는다.</span></article>
+          <article><strong>6</strong><span>Codex 앱은 Microsoft Store에서 검색해 다운로드한다.</span></article>
         </div>
         <div class="prompt-card closing-action"><p class="prompt-label">오늘 끝나고 바로 할 일</p><p class="prompt-text">우리 핵심 기능 3개를 고르고, 각 기능마다 실패 케이스 1개와 외주 계약 문장 1개를 적는다.</p></div>
       </section>

@@ -204,6 +204,18 @@ function syncPreviewScale() {
   document.documentElement.style.setProperty("--deck-scale", String(Math.max(scale, 0.42)));
 }
 
+function syncPartProgressColor(activeSlide) {
+  const partClass = ["deck-part-1", "deck-part-2", "deck-part-3", "deck-part-4"]
+    .find((className) => activeSlide.classList.contains(className));
+
+  if (!partClass) {
+    document.body.removeAttribute("data-current-part");
+    return;
+  }
+
+  document.body.dataset.currentPart = partClass.replace("deck-part-", "part-");
+}
+
 slides.forEach((slide) => {
   const purpose = slide.dataset.purpose;
   const head = slide.querySelector(".slide-head");
@@ -256,6 +268,8 @@ function updateSlide(index) {
     slide.classList.toggle("is-active", slideIndex === currentIndex);
     slide.setAttribute("aria-hidden", String(slideIndex !== currentIndex));
   });
+
+  syncPartProgressColor(slides[currentIndex]);
 
   const total = slides.length;
   counter.textContent = `${currentIndex + 1} / ${total}`;
