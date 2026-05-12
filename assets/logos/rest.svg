@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="REST API">
+  <rect x="8" y="14" width="48" height="36" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+  <path d="M20 29h19" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+  <path d="M34 23l8 8-8 8" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="19" cy="40" r="3" fill="#2563eb"/>
+  <circle cx="29" cy="40" r="3" fill="#2563eb"/>
+  <circle cx="39" cy="40" r="3" fill="#2563eb"/>
+</svg>
