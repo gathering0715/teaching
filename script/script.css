@@ -37,6 +37,10 @@ body {
   gap: 16px;
 }
 
+.script-title-group {
+  min-width: 190px;
+}
+
 .script-kicker {
   display: block;
   margin-bottom: 6px;
@@ -61,6 +65,29 @@ button {
   color: var(--text);
   font: inherit;
   font-weight: 800;
+}
+
+.part-jumps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.part-jumps button {
+  min-width: 58px;
+  min-height: 42px;
+  padding: 0 12px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.part-jumps button.is-active {
+  border-color: rgba(246, 210, 143, 0.65);
+  background: rgba(230, 180, 103, 0.12);
+  color: var(--accent-strong);
 }
 
 .deck-link {
@@ -159,6 +186,15 @@ button:disabled {
 
   .script-topbar {
     align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .part-jumps {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
   }
 
   .script-page {

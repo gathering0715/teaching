@@ -3,6 +3,7 @@ const pageCounter = document.getElementById("pageCounter");
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 const deckLink = document.getElementById("deckLink");
+const partJumpButtons = Array.from(document.querySelectorAll("[data-go-slide]"));
 
 const slideSyncKey = "teaching-current-slide";
 const sectionPattern = /^(\d{2})\.\s+(.+)$/;
@@ -80,6 +81,10 @@ function renderPage() {
   pageCounter.textContent = `${currentIndex + 1} / ${pages.length}`;
   prevButton.disabled = currentIndex === 0;
   nextButton.disabled = currentIndex === pages.length - 1;
+  partJumpButtons.forEach((button) => {
+    const targetIndex = Number.parseInt(button.dataset.goSlide, 10) - 1;
+    button.classList.toggle("is-active", targetIndex === currentIndex);
+  });
   syncHash();
   syncDeck();
 }
@@ -117,6 +122,14 @@ async function loadScript() {
 
 prevButton.addEventListener("click", goPrev);
 nextButton.addEventListener("click", goNext);
+partJumpButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const slideNumber = Number.parseInt(button.dataset.goSlide, 10);
+    if (!Number.isNaN(slideNumber)) {
+      goTo(slideNumber - 1);
+    }
+  });
+});
 deckLink.addEventListener("click", (event) => {
   event.preventDefault();
   deckWindow = window.open(deckLink.href, "teaching-deck");
