@@ -25,8 +25,8 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 22px clamp(18px, 3vw, 42px);
-  gap: 16px;
+  padding: 18px clamp(16px, 2.4vw, 34px);
+  gap: 12px;
 }
 
 .script-topbar,
@@ -39,7 +39,7 @@ body {
 
 .script-kicker {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: var(--accent);
   font-size: 13px;
   font-weight: 800;
@@ -49,7 +49,7 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(26px, 3vw, 42px);
+  font-size: clamp(24px, 2.4vw, 34px);
   line-height: 1;
 }
 
@@ -71,7 +71,7 @@ button {
 
 .script-page {
   min-height: 0;
-  padding: clamp(24px, 3.6vw, 48px);
+  padding: clamp(20px, 2.6vw, 36px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -86,7 +86,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: clamp(14px, 2vw, 28px);
+  margin-bottom: clamp(10px, 1.5vw, 20px);
   color: var(--muted);
   font-weight: 800;
 }
@@ -96,8 +96,8 @@ button {
 }
 
 .page-title {
-  margin: 0 0 20px;
-  font-size: clamp(30px, 3.6vw, 54px);
+  margin: 0 0 14px;
+  font-size: clamp(26px, 2.7vw, 42px);
   line-height: 1.06;
 }
 
@@ -106,15 +106,15 @@ button {
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 12px;
-  font-size: clamp(20px, 2.05vw, 32px);
-  line-height: 1.36;
+  gap: 9px;
+  font-size: clamp(17px, 1.45vw, 24px);
+  line-height: 1.32;
   word-break: keep-all;
 }
 
 .script-lines li {
-  padding-left: 16px;
-  border-left: 3px solid rgba(230, 180, 103, 0.45);
+  padding-left: 12px;
+  border-left: 2px solid rgba(230, 180, 103, 0.45);
 }
 
 .loading,
