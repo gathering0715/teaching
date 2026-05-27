@@ -8,6 +8,8 @@ const miniMapSlides = Array.from(document.querySelectorAll('[data-show-map="true
 
 let currentIndex = 0;
 let wheelLocked = false;
+let isSyncingFromScript = false;
+const slideSyncKey = "teaching-current-slide";
 const mapCopy = {
   frontend: "지금은 프런트, 즉 사용자가 직접 보는 화면 쪽을 풀어 설명하는 중입니다.",
   backend: "지금은 규칙과 처리 로직이 모여 있는 백엔드 쪽 설명입니다.",
@@ -281,6 +283,10 @@ function updateSlide(index) {
     : "비전공자 대표를 위한 개발 소통 · 채용 · 외주 · Codex 설치";
 
   history.replaceState(null, "", `#slide-${currentIndex + 1}`);
+
+  if (!isSyncingFromScript) {
+    localStorage.setItem(slideSyncKey, String(currentIndex + 1));
+  }
 }
 
 function goNext() {
@@ -688,6 +694,21 @@ window.addEventListener("hashchange", () => {
       updateSlide(parsed - 1);
     }
   }
+});
+
+window.addEventListener("storage", (event) => {
+  if (event.key !== slideSyncKey || !event.newValue) {
+    return;
+  }
+
+  const slideNumber = Number.parseInt(event.newValue, 10);
+  if (Number.isNaN(slideNumber) || slideNumber === currentIndex + 1) {
+    return;
+  }
+
+  isSyncingFromScript = true;
+  updateSlide(slideNumber - 1);
+  isSyncingFromScript = false;
 });
 
 if (location.hash.startsWith("#slide-")) {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>발표 대본 | 비전공자 대표를 위한 개발 소통 · 채용 · 외주 · Codex 설치</title>
+  <link rel="stylesheet" href="./script.css">
+</head>
+<body>
+  <main class="script-shell">
+    <header class="script-topbar">
+      <div>
+        <span class="script-kicker">Presenter Script</span>
+        <h1>발표 대본</h1>
+      </div>
+      <a id="deckLink" class="deck-link" href="../index.html#slide-1" target="_blank" rel="noreferrer">발표 화면</a>
+    </header>
+
+    <section id="scriptPage" class="script-page" aria-live="polite">
+      <p class="loading">대본을 불러오는 중입니다.</p>
+    </section>
+
+    <footer class="script-controls" aria-label="대본 이동">
+      <button id="prevButton" type="button">이전</button>
+      <span id="pageCounter">- / -</span>
+      <button id="nextButton" type="button">다음</button>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
