@@ -173,13 +173,14 @@
           </div>
         </div>
         <div class="principle-strip">
-          <span>프런트: 고객 경험</span>
-          <span>API: 약속</span>
-          <span>백엔드: 규칙</span>
-          <span>DB: 기록</span>
-          <span>서버: 운영</span>
+          <span>보는 기준: 기능 · 역할 · 개발 전 고려</span>
+          <span>프런트: 화면과 입력</span>
+          <span>API: 요청과 응답 약속</span>
+          <span>백엔드: 규칙 처리</span>
+          <span>DB: 기록과 복구</span>
+          <span>서버: 실행 공간</span>
           <span>Git: 코드 원본</span>
-          <span>배포: 반영 책임</span>
+          <span>배포: 고객 공개</span>
         </div>
       </section>
 
@@ -189,7 +190,7 @@
           <h2>프런트엔드는 고객이 보고 누르는 화면이다</h2>
         </div>
         <div class="part-one-role-panel deck-strip">
-          <strong>프런트가 하는 일</strong>
+          <strong>프런트의 기능 / 역할</strong>
           <span>화면 표시</span>
           <span>입력 받기</span>
           <span>API</span>
@@ -204,9 +205,9 @@
           <article class="choice-card niche"><strong>Svelte</strong><span>장점: 가볍고 빠름</span><small>단점: 인력 풀이 React보다 좁다</small></article>
         </div>
         <div class="tech-axis">
-          <span><b>1. 주 목적</b>프런트가 하는 일: 화면 표시 · 입력 받기 · 정보 전달 · 결과 보여주기</span>
-          <span><b>2. 개발언어</b>HTML · CSS · JavaScript · React · Vue · Angular · Svelte</span>
-          <span><b>3. 개발 전 생각할 것</b>서비스에 어떤 화면이 필요한가 / 각 화면에 어떤 버튼과 기능이 들어가는가</span>
+          <span><b>1. 무슨 기능인가</b>고객이 보는 화면, 입력칸, 버튼, 이동 흐름을 만든다</span>
+          <span><b>2. 어떤 역할인가</b>고객 행동을 받아 API로 보내고 결과를 다시 보여준다</span>
+          <span><b>3. 개발 전 고려</b>필요한 화면, 버튼, 오류 문구, 나중에 자주 바뀔 영역을 정한다</span>
         </div>
         <div class="metrics triple part-one-considerations deck-grid deck-grid-3">
           <article class="decision-card"><strong>서비스 구상</strong><span>고객이 왜 들어오고 무엇을 끝내야 하는지 적는다</span></article>
@@ -222,7 +223,7 @@
           <h2>API는 화면과 처리부가 주고받는 약속이다</h2>
         </div>
         <div class="part-one-role-panel deck-strip">
-          <strong>API가 하는 일</strong>
+          <strong>API의 기능 / 역할</strong>
           <span>화면 정보 받기</span>
           <span>필요한 정보 전달</span>
           <span>처리 결과 돌려주기</span>
@@ -235,9 +236,9 @@
           <span>OpenAPI 문서</span>
         </div>
         <div class="part-one-triad">
-          <article><strong>1. 주 목적</strong><span>화면에서 어떤 정보를 보내고 처리 뒤 무엇을 보여줄지 정한다</span></article>
-          <article><strong>2. 연결 방식</strong><span>REST · Fetch · GraphQL · OpenAPI 문서</span></article>
-          <article><strong>3. 개발 전 생각할 것</strong><span>버튼을 누르면 어떤 정보가 넘어가고 성공·실패 때 무엇을 보여줄 것인가</span></article>
+          <article><strong>1. 무슨 기능인가</strong><span>화면과 백엔드가 주고받을 요청·응답 형식을 정한다</span></article>
+          <article><strong>2. 어떤 역할인가</strong><span>누가 무엇을 요청했고 성공·실패 결과가 무엇인지 구분한다</span></article>
+          <article><strong>3. 개발 전 고려</strong><span>보낼 값, 권한, API 키, 성공·실패 응답을 문서로 남긴다</span></article>
         </div>
         <div class="flow-strip compact-flow">
           <span>어떤 정보를 보낼지</span>
@@ -261,16 +262,16 @@
           <h2>백엔드는 화면 뒤에서 규칙을 처리하는 영역이다</h2>
         </div>
         <div class="backend-role-panel deck-strip">
-          <strong>백엔드가 하는 일</strong>
+          <strong>백엔드의 기능 / 역할</strong>
           <span>권한 확인</span>
           <span>규칙 처리</span>
           <span>DB 저장</span>
           <span>처리 결과 전달</span>
         </div>
         <div class="part-one-triad">
-          <article><strong>1. 주 목적</strong><span>화면 뒤에서 권한, 규칙, 저장, 처리 결과를 만든다</span></article>
-          <article><strong>2. 개발언어</strong><span>Python · Node · Java · PHP · Spring</span></article>
-          <article><strong>3. 개발 전 생각할 것</strong><span>회원, 예약, 결제, 정산 같은 사업 규칙을 어디까지 자동 처리할 것인가</span></article>
+          <article><strong>1. 무슨 기능인가</strong><span>화면 뒤에서 권한, 검증, 계산, 저장 요청을 처리한다</span></article>
+          <article><strong>2. 어떤 역할인가</strong><span>사업 규칙을 코드로 실행하고 실패 이유를 남긴다</span></article>
+          <article><strong>3. 개발 전 고려</strong><span>회원, 예약, 결제, 정산 규칙과 예외 케이스를 먼저 정한다</span></article>
         </div>
         <div class="framework-grid practical part-one-tech-section deck-grid deck-grid-5">
           <article class="framework-card trend"><strong>Python / FastAPI</strong><p><span>장점: 요즘 트렌드</span>단점: 큰 서비스는 구조를 잡아야 한다</p></article>
@@ -294,7 +295,7 @@
           <h2>DB는 서비스 정보를 저장하는 회사 장부다</h2>
         </div>
         <div class="part-one-role-panel deck-strip">
-          <strong>DB가 하는 일</strong>
+          <strong>DB의 기능 / 역할</strong>
           <span>데이터 저장</span>
           <span>조회</span>
           <span>권한 제한</span>
@@ -307,9 +308,9 @@
           <span>Redis</span>
         </div>
         <div class="part-one-triad">
-          <article><strong>1. 주 목적</strong><span>고객, 주문, 결제, 로그를 저장하고 다시 조회한다</span></article>
-          <article><strong>2. 저장소 종류</strong><span>PostgreSQL · MySQL · MongoDB · Redis</span></article>
-          <article><strong>3. 개발 전 생각할 것</strong><span>고객, 주문, 결제, 상담, 로그 중 어떤 정보를 DB에 저장할 것인가</span></article>
+          <article><strong>1. 무슨 기능인가</strong><span>고객, 주문, 결제, 로그를 저장하고 다시 조회한다</span></article>
+          <article><strong>2. 어떤 역할인가</strong><span>회사의 장부처럼 기록, 권한, 복구 기준을 책임진다</span></article>
+          <article><strong>3. 개발 전 고려</strong><span>무엇을 저장·삭제·보관하고 누가 볼 수 있는지 정한다</span></article>
         </div>
         <div class="card-row deck-grid deck-grid-3">
           <article class="info-card"><h3>저장</h3><p>고객, 주문, 결제, 로그가 무엇으로 남는지 정한다.</p></article>
@@ -330,7 +331,7 @@
           <h2>서버는 서비스가 실제로 돌아가는 운영 공간이다</h2>
         </div>
         <div class="part-one-role-panel deck-strip">
-          <strong>서버가 하는 일</strong>
+          <strong>서버의 기능 / 역할</strong>
           <span>서비스 실행</span>
           <span>접속 처리</span>
           <span>백업</span>
@@ -343,9 +344,9 @@
           <span>자체 서버</span>
         </div>
         <div class="part-one-triad">
-          <article><strong>1. 주 목적</strong><span>서비스가 실제로 돌아가는 운영 환경을 제공한다</span></article>
-          <article><strong>2. 운영 환경</strong><span>AWS · Azure · Naver Cloud · 자체 서버</span></article>
-          <article><strong>3. 개발 전 생각할 것</strong><span>서비스가 열린 뒤 비용, 백업, 장애 알림, 계정 권한을 누가 볼 것인가</span></article>
+          <article><strong>1. 무슨 기능인가</strong><span>서비스가 실제로 실행되고 접속되는 공간을 제공한다</span></article>
+          <article><strong>2. 어떤 역할인가</strong><span>운영 비용, 백업, 장애 알림, 접근 권한의 책임 지점이다</span></article>
+          <article><strong>3. 개발 전 고려</strong><span>회사 계정, 비용 상한, 백업, 알림 수신자를 정한다</span></article>
         </div>
         <div class="choice-grid server-options">
           <article class="choice-card key-card"><strong>클라우드</strong><span>초기 서비스 기본값</span><small>초기 비용이 낮고 확장·백업·장애 알림 도구를 쓰기 쉽다. 대신 권한 설정과 월 비용 관리를 확인해야 한다.</small></article>
@@ -368,7 +369,7 @@
           <h2>Git은 코드 원본과 변경 이력을 보관하는 도구다</h2>
         </div>
         <div class="part-one-role-panel deck-strip">
-          <strong>Git이 하는 일</strong>
+          <strong>Git의 기능 / 역할</strong>
           <span>변경 이력</span>
           <span>원본 보관</span>
           <span>되돌리기</span>
@@ -381,9 +382,9 @@
           <span>Commit</span>
         </div>
         <div class="part-one-triad">
-          <article><strong>Branch</strong><span>운영 중인 코드와 개발 중인 코드를 분리한다</span></article>
-          <article><strong>Commit</strong><span>변경 이유와 수정 범위를 짧게 남긴다</span></article>
-          <article><strong>Review</strong><span>운영 반영 전 최소 확인 절차를 둔다</span></article>
+          <article><strong>1. 무슨 기능인가</strong><span>코드 원본과 누가 무엇을 바꿨는지 남긴다</span></article>
+          <article><strong>2. 어떤 역할인가</strong><span>되돌리기, 인수인계, 협업의 기준이 된다</span></article>
+          <article><strong>3. 개발 전 고려</strong><span>회사 계정 소유, 접근 권한, 변경 이력 기준을 정한다</span></article>
         </div>
         <div class="metrics triple compact-metrics part-one-considerations deck-grid deck-grid-3">
           <article class="decision-card"><strong>저장소 소유권</strong><span>회사 계정이 원본 저장소를 소유하는가</span></article>
@@ -402,7 +403,7 @@
           <h2>배포는 만든 기능을 고객에게 공개하는 절차다</h2>
         </div>
         <div class="part-one-role-panel deck-strip">
-          <strong>배포가 하는 일</strong>
+          <strong>배포의 기능 / 역할</strong>
           <span>테스트 반영</span>
           <span>운영 공개</span>
           <span>오픈 확인</span>
@@ -415,9 +416,9 @@
           <span>점검</span>
         </div>
         <div class="metrics triple compact-metrics part-one-considerations deck-grid deck-grid-3">
-          <article class="decision-card"><strong>검수 환경</strong><span>운영 전 테스트 서버에서 대표가 확인하는가</span></article>
-          <article class="decision-card"><strong>베타 운영</strong><span>일부 고객이나 내부 사용자로 먼저 확인하는가</span></article>
-          <article class="decision-card"><strong>오픈 후 점검</strong><span>운영 반영 뒤 핵심 기능과 오류를 바로 확인하는가</span></article>
+          <article class="decision-card"><strong>무슨 기능인가</strong><span>완성된 기능을 고객이 쓰는 운영 환경에 반영한다</span></article>
+          <article class="decision-card"><strong>어떤 역할인가</strong><span>테스트, 승인, 공개, 되돌리기 절차를 책임진다</span></article>
+          <article class="decision-card"><strong>개발 전 고려</strong><span>운영 반영 기준과 문제 발생 시 복구 방법을 정한다</span></article>
         </div>
       </section>
 
@@ -427,7 +428,7 @@
           <h2>버튼 하나는 화면·처리·저장을 함께 움직인다</h2>
         </div>
         <div class="part-one-role-panel deck-strip">
-          <strong>버튼 하나에서 확인할 일</strong>
+          <strong>기능 하나: 역할 / 개발 전 고려</strong>
           <span>고객 행동</span>
           <span>화면 상태</span>
           <span>서버 판단</span>
@@ -469,7 +470,7 @@
         <h2>1부는 개발의 흐름을 보는 시간이다</h2>
         <div class="part-one-takeaway">
           <div class="takeaway-hero">
-            <strong>개발은 화면 하나가 아니라 서비스가 움직이는 전체 흐름이다</strong>
+            <strong>개발 대화는 기능 · 역할 · 개발 전 고려를 묻는 일이다</strong>
             <p><span>고객 행동이 화면에서 시작해 API와 백엔드를 지나 DB에 기록된다.</span><span>그리고 Git, 서버, 배포가 있어야 실제 서비스로 운영된다.</span></p>
           </div>
           <div class="takeaway-flow">
