@@ -10,6 +10,7 @@ const sectionPattern = /^(\d{2})\.\s+(.+)$/;
 let pages = [];
 let currentIndex = 0;
 let wheelLocked = false;
+let deckWindow = null;
 
 function parseScript(text) {
   const lines = text.replace(/\r\n/g, "\n").split("\n");
@@ -46,6 +47,14 @@ function syncDeck() {
   const slideNumber = currentIndex + 1;
   localStorage.setItem(slideSyncKey, String(slideNumber));
   deckLink.href = `../index.html#slide-${slideNumber}`;
+
+  if (deckWindow && !deckWindow.closed) {
+    try {
+      deckWindow.location.href = new URL(deckLink.href, location.href).href;
+    } catch {
+      // The storage event still syncs same-origin deck tabs.
+    }
+  }
 }
 
 function renderPage() {
@@ -108,6 +117,13 @@ async function loadScript() {
 
 prevButton.addEventListener("click", goPrev);
 nextButton.addEventListener("click", goNext);
+deckLink.addEventListener("click", (event) => {
+  event.preventDefault();
+  deckWindow = window.open(deckLink.href, "teaching-deck");
+  if (deckWindow) {
+    deckWindow.focus();
+  }
+});
 
 document.addEventListener("keydown", (event) => {
   if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(event.key)) {
