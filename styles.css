@@ -6934,10 +6934,10 @@ body {
 
   [data-title="API"] .api-sample {
     display: grid !important;
-    grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: 1.05fr repeat(4, minmax(0, 1fr)) !important;
     align-items: center !important;
     min-height: 96px !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
 
   [data-title="API"] .api-sample strong,
@@ -6946,7 +6946,7 @@ body {
   }
 
   [data-title="API"] .api-sample span {
-    font-size: 0.98rem !important;
+    font-size: 0.9rem !important;
     line-height: 1.28 !important;
   }
 
