@@ -277,8 +277,8 @@ function updateSlide(index) {
 
   const activeTitle = slides[currentIndex].dataset.title;
   document.title = activeTitle
-    ? `${activeTitle} | 비전공자 대표를 위한 개발 소통 · 채용 · 외주 실패 방지`
-    : "비전공자 대표를 위한 개발 소통 · 채용 · 외주 실패 방지";
+    ? `${activeTitle} | 비전공자 대표를 위한 개발 소통 · 채용 · 외주 · Codex 설치`
+    : "비전공자 대표를 위한 개발 소통 · 채용 · 외주 · Codex 설치";
 
   history.replaceState(null, "", `#slide-${currentIndex + 1}`);
 }
@@ -407,6 +407,143 @@ miniMapSlides.forEach((slide) => {
     main.append(splitLayout.nextSibling);
   }
 });
+
+function createBarChart(title, items) {
+  const chart = document.createElement("div");
+  chart.className = "deck-chart bar-chart";
+  chart.setAttribute("aria-label", title);
+
+  const heading = document.createElement("strong");
+  heading.className = "deck-chart-title";
+  heading.textContent = title;
+  chart.append(heading);
+
+  const list = document.createElement("div");
+  list.className = "deck-chart-list";
+
+  items.forEach((item) => {
+    const row = document.createElement("div");
+    row.className = "deck-chart-row";
+    row.style.setProperty("--value", `${item.value}%`);
+
+    const label = document.createElement("span");
+    label.textContent = item.label;
+
+    const track = document.createElement("i");
+    track.setAttribute("aria-hidden", "true");
+
+    const value = document.createElement("em");
+    value.textContent = item.valueText || `${item.value}`;
+
+    row.append(label, track, value);
+    list.append(row);
+  });
+
+  chart.append(list);
+  return chart;
+}
+
+function createDonutChart(title, items) {
+  const chart = document.createElement("div");
+  chart.className = "deck-chart donut-chart";
+  chart.setAttribute("aria-label", title);
+
+  const heading = document.createElement("strong");
+  heading.className = "deck-chart-title";
+  heading.textContent = title;
+
+  const donut = document.createElement("div");
+  donut.className = "donut-visual";
+  donut.setAttribute("aria-hidden", "true");
+
+  let cursor = 0;
+  const stops = items.map((item) => {
+    const start = cursor;
+    cursor += item.value;
+    return `${item.color} ${start}% ${cursor}%`;
+  });
+  donut.style.setProperty("--donut-stops", stops.join(", "));
+
+  const total = document.createElement("b");
+  total.textContent = items[0]?.center || "MVP";
+  donut.append(total);
+
+  const legend = document.createElement("div");
+  legend.className = "donut-legend";
+  items.forEach((item) => {
+    const label = document.createElement("span");
+    label.style.setProperty("--dot", item.color);
+    label.textContent = item.label;
+    legend.append(label);
+  });
+
+  chart.append(heading, donut, legend);
+  return chart;
+}
+
+function mountChart(selector, anchorSelector, chart, position = "after") {
+  const slide = document.querySelector(selector);
+  if (!slide || slide.querySelector(".deck-chart")) {
+    return;
+  }
+
+  const anchor = slide.querySelector(anchorSelector);
+  if (!anchor) {
+    return;
+  }
+
+  if (position === "before") {
+    anchor.before(chart);
+  } else {
+    anchor.after(chart);
+  }
+}
+
+function enhanceDeckVisuals() {
+  mountChart(
+    '[data-map-focus="frontend"]',
+    ".tech-axis",
+    createBarChart("기술 선택 기준", [
+      { label: "React", value: 94, valueText: "채용" },
+      { label: "Vue", value: 76, valueText: "적응" },
+      { label: "HTML/CSS", value: 64, valueText: "단순" },
+      { label: "Angular", value: 58, valueText: "규칙" },
+    ])
+  );
+
+  mountChart(
+    '[data-map-focus="backend"]',
+    ".framework-grid",
+    createBarChart("백엔드 판단 비중", [
+      { label: "운영", value: 88 },
+      { label: "채용", value: 82 },
+      { label: "구조", value: 78 },
+      { label: "초기 속도", value: 68 },
+    ])
+  );
+
+  mountChart(
+    '.deck-part-3[data-title*="MVP"]',
+    ".mvp-stage",
+    createDonutChart("MVP 범위 균형", [
+      { label: "반드시 만들기 45%", value: 45, color: "#286a64", center: "45%" },
+      { label: "나중으로 미루기 35%", value: 35, color: "#d78345" },
+      { label: "내부에서 관리 20%", value: 20, color: "#2f6fcd" },
+    ])
+  );
+
+  mountChart(
+    ".deck-part-3:has(.maintenance-stage)",
+    ".maintenance-stage",
+    createBarChart("유지보수 대응 기준", [
+      { label: "긴급 장애", value: 92, valueText: "30분" },
+      { label: "일반 오류", value: 70, valueText: "2일" },
+      { label: "신규 요청", value: 44, valueText: "견적" },
+    ])
+  );
+}
+
+enhanceDeckVisuals();
 
 document.addEventListener("keydown", (event) => {
   const key = event.key;
