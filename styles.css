@@ -10547,6 +10547,18 @@ body .slide[data-title="Codex 앱 소개"] .codex-install-hero {
     min-height: 86px !important;
     align-items: center !important;
   }
+
+  body .slide[data-title="진행 방식"] .codex-run-grid {
+    align-items: start !important;
+    grid-auto-rows: auto !important;
+  }
+
+  body .slide[data-title="진행 방식"] .codex-run-grid article {
+    height: auto !important;
+    min-height: 156px !important;
+    padding: 24px 26px !important;
+    align-content: start !important;
+  }
 }
 
 @media (max-width: 999px) {
