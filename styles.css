@@ -9437,6 +9437,12 @@ body .slide.codex-install:not([data-title="Codex 앱 소개"]) {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.codex-prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .codex-check-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -9448,6 +9454,19 @@ body .slide.codex-install:not([data-title="Codex 앱 소개"]) {
 .codex-route-split article,
 .codex-run-grid article,
 .codex-check-grid article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 190px;
+  padding: 22px;
+  border: 1px solid rgba(25, 31, 40, 0.08);
+  border-left: 6px solid #3182f6;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f8fc 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.78);
+}
+
+.codex-prompt-grid article {
   display: grid;
   align-content: start;
   gap: 10px;
@@ -9484,6 +9503,12 @@ body .slide.codex-install:not([data-title="Codex 앱 소개"]) {
   font-weight: 950;
 }
 
+.codex-prompt-grid span {
+  color: #226bd8;
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
 .codex-path-card strong,
 .codex-choice-grid strong,
 .codex-prep-grid strong,
@@ -9496,12 +9521,25 @@ body .slide.codex-install:not([data-title="Codex 앱 소개"]) {
   line-height: 1.18;
 }
 
+.codex-prompt-grid strong {
+  color: var(--ink);
+  font-size: 1.32rem;
+  line-height: 1.18;
+}
+
 .codex-path-card em,
 .codex-choice-grid em,
 .codex-prep-grid em,
 .codex-step-board em,
 .codex-route-split em,
 .codex-run-grid em {
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.34;
+}
+
+.codex-prompt-grid em {
   color: var(--muted);
   font-style: normal;
   font-weight: 800;
@@ -9552,6 +9590,32 @@ body .slide.codex-install:not([data-title="Codex 앱 소개"]) {
   margin-top: 8px;
 }
 
+.codex-prompt-example {
+  display: grid;
+  gap: 14px;
+  margin-top: 4px;
+  padding: 28px;
+  border: 1px solid rgba(25, 31, 40, 0.1);
+  border-left: 6px solid var(--accent-2);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f4fbfa 0%, #ffffff 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.78);
+}
+
+.codex-prompt-example strong {
+  color: #0f766e;
+  font-size: 1rem;
+  font-weight: 950;
+}
+
+.codex-prompt-example p {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.18rem, 1.5vw, 1.48rem);
+  font-weight: 850;
+  line-height: 1.55;
+}
+
 .codex-terminal-card:not(.multi) {
   grid-template-columns: 1.25fr 0.75fr;
 }
@@ -9595,6 +9659,7 @@ body .slide.codex-install:not([data-title="Codex 앱 소개"]) {
   .codex-step-board.compact,
   .codex-route-split,
   .codex-run-grid,
+  .codex-prompt-grid,
   .codex-check-grid,
   .codex-command-row,
   .codex-note-strip,
